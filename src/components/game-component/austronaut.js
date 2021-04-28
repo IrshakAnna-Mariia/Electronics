@@ -73,7 +73,7 @@ export default  class Astronaut extends Component {
             }
 
         if (e.key === 'e') this.props.onSetCoordinate(this.state.x, this.state.y, true)
-        this.props.onSetCoordinate(this.state.x, this.state.y, false)
+        else this.props.onSetCoordinate(this.state.x, this.state.y, false)
     }
 
     render() {
