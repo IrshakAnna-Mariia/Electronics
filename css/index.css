@@ -1,0 +1,123 @@
+html {
+    height: 100%;
+}
+
+.background {
+    min-height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    background: url(../img/space.gif) no-repeat center center;
+    background-size: 100%;
+}
+
+.game {
+    background: #111;
+    background-size: 100%;
+}
+
+/*Menu style*/
+
+.links {
+    text-decoration: none;
+    border: 3px solid white;
+    box-shadow: 0 0 4px 4px ForestGreen;
+    border-radius: 40px;
+    font-size: large;
+    padding: 3%;
+    background: linear-gradient(to right, LimeGreen, green);
+    color: white;
+    font-variant: small-caps;
+    margin: 3% 0 3% 0;
+    text-align: center;
+}
+
+.links:hover {
+    background: linear-gradient(to right, ForestGreen, DarkGreen);
+    box-shadow: 0 0 6px 4px ForestGreen;
+}
+
+.links b i {
+    position: fixed;
+    left: 57%;
+}
+
+#menuItem {
+    display: flex;
+    flex-direction: column;
+}
+
+#fieldset {
+    margin-top: 10%;
+    margin-left: 35%;
+    padding: 2% 5% 4% 5%;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    box-shadow: 0 0 10px 4px green;
+}
+
+#fieldset h1 {
+    text-align: center;
+    text-shadow: 0 0 10px white;
+    color: white;
+    font-size: 50px;
+}
+
+/*Game style*/
+
+.astronaut0 {
+    position: relative;
+    width: 5%;
+    height: 10%;
+    content: url(../img/astronaut.png);
+}
+
+.astronaut1 {
+    position: relative;
+    width: 5%;
+    height: 10%;
+    content: url(../img/asto_anim1.png);
+}
+
+.astronaut2 {
+    position: relative;
+    width: 5%;
+    height: 10%;
+    content: url(../img/asto_anim2.png);
+}
+
+.astronaut3 {
+    position: relative;
+    width: 5%;
+    height: 10%;
+    content: url(../img/asto_anim3.png);
+}
+
+.transform {
+    transform: scale(-1,1);
+}
+
+#square {
+    width: 100px;
+    height: 100px;
+    background: chocolate;
+    margin-left: 50%;
+}
+
+.frame {
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: block;
+    opacity: 1;
+    transition: opacity 2s;
+    content: url(../img/frame.gif);
+    z-index: 100;
+}
