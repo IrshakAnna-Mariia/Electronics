@@ -50,31 +50,31 @@ export default  class Astronaut extends Component {
     }
 
     onMotion = (e) => {
-        if (e.key === 'd' || e.key === 'ArrowRight')
+        if (e.keyCode === 68 || e.key === 'ArrowRight')
             if (this.state.x < this.state.maxX) {
                 this.setState(({x}) => {return {x: (x++) + 5}})
                 this.defMovingHorizontally(false);
             }
 
-        if (e.key === 'a' || e.key === 'ArrowLeft')
+        if (e.keyCode === 65 || e.key === 'ArrowLeft')
             if (this.state.x > 0) {
                 this.setState(({x}) => {return {x: (x--) - 5}})
                 this.defMovingHorizontally(true);
             }
 
-        if (e.key === 'w' || e.key === 'ArrowUp')
+        if (e.keyCode === 87 || e.key === 'ArrowUp')
             if (this.state.y > 0) {
                 this.setState(({y}) => {return {y: (y--) - 5}})
                 this.defMovingVertically("up");
             }
 
-        if (e.key === 's' || e.key === 'ArrowDown')
+        if (e.keyCode === 83 || e.key === 'ArrowDown')
             if (this.state.y < this.state.maxY) {
                 this.setState(({y}) => {return {y: (y++) + 5}})
                 this.defMovingVertically("down");
             }
 
-        if (e.key === 'e') this.props.onSetCoordinate(this.state.x, this.state.y, true)
+        if (e.keyCode === 69) this.props.onSetCoordinate(this.state.x, this.state.y, true)
         else this.props.onSetCoordinate(this.state.x, this.state.y, false)
     }
 
