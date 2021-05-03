@@ -1,0 +1,41 @@
+.astronaut {
+    position: relative;
+    width: 5%;
+    height: 10%;
+}
+
+.anim0 {
+    content: url(../img/astronaut.png);
+}
+
+.anim1 {
+    content: url(../img/asto_anim1.png);
+}
+
+.anim2 {
+    content: url(../img/asto_anim2.png);
+}
+
+.anim3 {
+    content: url(../img/asto_anim3.png);
+}
+
+.anim4 {
+    content: url(../img/asto_anim_down.png);
+}
+
+.anim5 {
+    content: url(../img/asto_anim_down2.png);
+}
+
+.anim6 {
+    content: url(../img/asto_anim_up.png);
+}
+
+.anim7 {
+    content: url(../img/asto_anim_up2.png);
+}
+
+.transform {
+    transform: scale(-1,1);
+}

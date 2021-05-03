@@ -1,3 +1,5 @@
+@import url('animation.css');
+
 html {
     height: 100%;
 }
@@ -69,38 +71,6 @@ html {
 }
 
 /*Game style*/
-
-.astronaut0 {
-    position: relative;
-    width: 5%;
-    height: 10%;
-    content: url(../img/astronaut.png);
-}
-
-.astronaut1 {
-    position: relative;
-    width: 5%;
-    height: 10%;
-    content: url(../img/asto_anim1.png);
-}
-
-.astronaut2 {
-    position: relative;
-    width: 5%;
-    height: 10%;
-    content: url(../img/asto_anim2.png);
-}
-
-.astronaut3 {
-    position: relative;
-    width: 5%;
-    height: 10%;
-    content: url(../img/asto_anim3.png);
-}
-
-.transform {
-    transform: scale(-1,1);
-}
 
 #square {
     width: 100px;
