@@ -26,28 +26,6 @@ export default  class Astronaut extends Component {
         document.removeEventListener('keyup', () => {this.setState({currentImg: 0});})
     }
 
-    defMoving = (direction) => {
-        switch (direction) {
-            case 'right':
-                this.setState(({currentImg}) => {return {currentImg: currentImg+1}})
-                if (this.state.currentImg > 3) this.setState({currentImg: 1});
-                this.setState({transform: false});
-                break;
-            case 'left':
-                this.setState(({currentImg}) => {return {currentImg: currentImg+1}})
-                if (this.state.currentImg > 3) this.setState({currentImg: 1});
-                this.setState({transform: true});
-                break;
-            case 'down':
-                if (this.state.currentImg !== 4) this.setState({currentImg: 4});
-                else this.setState({currentImg: 5});
-                break;
-            case 'up':
-                if (this.state.currentImg !== 6) this.setState({currentImg: 6});
-                else this.setState({currentImg: 7});
-                break;
-        }
-    }
     defMovingHorizontally = (blTransform) => {
         if (this.state.slower === 1 && this.state.currentImg !== 0) return this.setState({slower: 2});
         this.setState(({currentImg}) => {return {currentImg: currentImg+1}})
@@ -74,25 +52,25 @@ export default  class Astronaut extends Component {
     onMotion = (e) => {
         if (e.key === 'd' || e.key === 'ArrowRight')
             if (this.state.x < this.state.maxX) {
-                this.setState(({x}) => {return {x: (x++) + 3}})
+                this.setState(({x}) => {return {x: (x++) + 5}})
                 this.defMovingHorizontally(false);
             }
 
         if (e.key === 'a' || e.key === 'ArrowLeft')
             if (this.state.x > 0) {
-                this.setState(({x}) => {return {x: (x--) - 3}})
+                this.setState(({x}) => {return {x: (x--) - 5}})
                 this.defMovingHorizontally(true);
             }
 
         if (e.key === 'w' || e.key === 'ArrowUp')
             if (this.state.y > 0) {
-                this.setState(({y}) => {return {y: (y--) - 3}})
+                this.setState(({y}) => {return {y: (y--) - 5}})
                 this.defMovingVertically("up");
             }
 
         if (e.key === 's' || e.key === 'ArrowDown')
             if (this.state.y < this.state.maxY) {
-                this.setState(({y}) => {return {y: (y++) + 3}})
+                this.setState(({y}) => {return {y: (y++) + 5}})
                 this.defMovingVertically("down");
             }
 
