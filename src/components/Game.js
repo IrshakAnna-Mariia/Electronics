@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Astronaut from './game-component/austronaut'
 import Tooltip from '@material-ui/core/Tooltip'
+import Lecture from "./game-component/lecture";
 
 export default  class Game extends Component {
     constructor(props) {
@@ -16,7 +17,7 @@ export default  class Game extends Component {
     componentDidMount() {
         const elem = document.getElementById('square')
         const xSq = elem.getBoundingClientRect().left;
-        const ySq = elem.getBoundingClientRect().height;
+        const ySq = elem.getBoundingClientRect().top;
         this.setState({xSquare: xSq});
         this.setState({ySquare: ySq});
     }
@@ -50,7 +51,7 @@ export default  class Game extends Component {
                 >
                     <div id='square'/>
                 </Tooltip>
-                <div className={visibleFrame ? "frame" : ""}/>
+                {visibleFrame ? <Lecture/> : ""}
             </div>
         )
     }

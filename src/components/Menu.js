@@ -7,7 +7,7 @@ export default  class Menu extends Component {
             <div className='background menu'>
                 <fieldset id='fieldset'>
                     <div id='menuItem'>
-                        <h1>Назва гри</h1>
+                        <h1 className='hm1'>Назва гри</h1>
                         <Link to="/game" className="links">
                             <b>почати гру</b><i className="fa fa-angle-right" aria-hidden="true"/>
                         </Link>
