@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
+import {Link} from "react-router-dom";
 
-export default  class Lecture extends Component {
+export default  class FrameLecture extends Component {
     render() {
         return (
             <div className="frame">
@@ -16,6 +17,9 @@ export default  class Lecture extends Component {
                         – схемотехніка на функціональних вузлах.<br/>
                         Перше покоління схемотехніки зв’язку починається з 1896 р., тобто часу винаходу російським вченим О.С. Поповим радіо. У зв’язку з цим (...)
                     </p>
+                    <Link to="/lecture">
+                        <h1>Перейти до повної лекції</h1>
+                    </Link>
                 </div>
             </div>
         )

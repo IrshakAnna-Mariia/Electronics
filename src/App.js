@@ -7,6 +7,8 @@ import GameStore from "./store/reducers";
 import Game from "./components/Game";
 import Settings from "./components/Settings";
 import Exit from "./components/Exit";
+import Lecture from "./components/Lecture";
+import Test from "./components/Test";
 
 export const store = createStore(GameStore)
 
@@ -20,6 +22,12 @@ export default function App() {
                     </Route>
                     <Route exact path="/game">
                         <div className='menu'><Game/></div>
+                    </Route>
+                    <Route exact path="/lecture">
+                        <Lecture/>
+                    </Route>
+                    <Route exact path="/test">
+                        <Test/>
                     </Route>
                     <Route exact path="/settings">
                         <Settings/>

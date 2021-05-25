@@ -76,6 +76,7 @@ export default  class Astronaut extends Component {
 
         if (e.keyCode === 69) this.props.onSetCoordinate(this.state.x, this.state.y, true)
         else this.props.onSetCoordinate(this.state.x, this.state.y, false)
+        if (e.key === 'Escape') this.props.onSetCoordinate(this.state.x, this.state.y, false)
     }
 
     render() {

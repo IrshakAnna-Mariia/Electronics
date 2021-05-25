@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Astronaut from './game-component/austronaut'
 import Tooltip from '@material-ui/core/Tooltip'
-import Lecture from "./game-component/lecture";
+import FrameLecture from "./game-component/FrameLecture";
 
 export default  class Game extends Component {
     constructor(props) {
@@ -34,7 +34,7 @@ export default  class Game extends Component {
             if (openFrame) {
                 this.setTooltipIsOpen(false)
                 this.setState({visibleFrame: true});
-            }
+            } else {this.setState({visibleFrame: false})}
         } else this.setTooltipIsOpen(false)
     }
 
@@ -51,7 +51,7 @@ export default  class Game extends Component {
                 >
                     <div id='square'/>
                 </Tooltip>
-                {visibleFrame ? <Lecture/> : ""}
+                {visibleFrame ? <FrameLecture/> : ""}
             </div>
         )
     }
